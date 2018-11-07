@@ -1,25 +1,4 @@
 - scope: javascript
-  trigger: use
-  description: use strict
-  mTime: 1515763095278
-  text: |
-        "use strict";
-
-- scope: javascript
-  trigger: nemo
-  description: "<%= ... %>"
-  mTime: 1522162254969
-  text: |
-        <%= ${1:} %>
-
-- scope: javascript
-  trigger: money
-  description: jQuery
-  mTime: 1527261415853
-  text: |
-        $("${1:}")
-
-- scope: javascript
   trigger: ajax
   description: $.ajax
   mTime: 1527270992777
@@ -33,23 +12,105 @@
           }
         });
 
-- trigger: nem
-  scope: html
-  mTime: 1455995076255
-  description: "<% ... %>"
+- scope: javascript
+  trigger: money
+  description: jQuery
+  mTime: 1527261415853
   text: |
-        <% ${1} %>
+        $("${1:}")
 
-- trigger: nemo
+- scope: javascript
+  trigger: nemo
   description: "<%= ... %>"
-  scope: html
+  mTime: 1522162254969
+  text: |
+        <%= ${1:} %>
+
+- scope: javascript
+  trigger: use
+  description: use strict
+  mTime: 1515763095278
+  text: |
+        "use strict";
+
+- scope: html
+  trigger: nemo
+  description: "<%= ... %>"
   mTime: 1455995059545
   text: |
         <%= ${1:} %>
 
-- trigger: html
+- scope: html
+  trigger: viewport
+  description: meta viewport
+  mTime: 1528902902185
+  text: |
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+- scope: html
+  trigger: form-group
+  description: form-group ...
+  mTime: 1515229134117
+  text: |
+        <div class="form-group">
+          <%= f.label :${1:xxx}, "${2:ooo}" %>
+          <%= f.text_field :${3:xxx}, class: "form-control" %>
+        </div>
+
+- scope: html
+  trigger: meta_charset
+  description: meta charset
+  mTime: 1511574485965
+  text: |
+        <meta charset="UTF-8">
+
+- scope: html
+  trigger: meta_description
+  description: meta description
+  mTime: 1511574469489
+  text: |
+        <meta name="description" content="Free Web tutorials">
+
+- scope: html
+  trigger: meta_author
+  description: meta author
+  mTime: 1511574403951
+  text: |
+        <meta name="author" content="John Doe">
+
+- scope: html
+  trigger: meta_keywords
+  description: meta keywords
+  mTime: 1511574206825
+  text: |
+        <meta name="keywords" content="HTML, CSS, XML, JavaScript">
+
+- scope: html
+  trigger: meta_viewport
+  description: meta viewport
+  mTime: 1511573969677
+  text: |
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+- scope: html
+  trigger: d3js
+  description: d3js
+  mTime: 1456608208002
+  text: |
+        <script src="//d3js.org/d3.v3.min.js" charset="utf-8"></script>
+
+- scope: html
+  trigger: script
+  description: script
+  mTime: 1515857686025
+  text: |
+        <script>
+          ${1:}
+        </script> 
+
+- scope: html
+  trigger: html
   description: html
-  scope: html
   mTime: 1515955587846
   text: |
         <!DOCTYPE html>
@@ -62,237 +123,261 @@
           </body>
         </html>
 
-- trigger: script
-  description: script
-  scope: html
-  mTime: 1515857686025
+- scope: html
+  trigger: nem
+  mTime: 1455995076255
+  description: "<% ... %>"
   text: |
-        <script>
+        <% ${1} %>
+
+- scope: ruby
+  trigger: ns
+  description: namespace
+  mTime: 1540681591056
+  text: |
+        namespace :${1:admin} do
+          ${2:}
+        end
+
+- scope: ruby
+  trigger: change_column_default
+  description: change_column_default
+  mTime: 1536953181932
+  text: |
+        change_column_default :cart_items, :quantity, 1
+
+- scope: ruby
+  trigger: rake-task
+  description: "task xxx: :envir do ... end"
+  mTime: 1535449186452
+  text: |
+        task fake_products: :environment do
+          Product.destroy_all
+          100.times do
+            Product.create!(
+              name: FFaker::Name.first_name,
+              description: FFaker::Lorem.paragraph,
+              price: ( rand(500)+1 ) * 10,
+              image: FFaker::Avatar.image
+            )
+          end
+          
+          puts "have created fake products"
+          puts "now you have #{Product.count} products record"
+        end
+
+- scope: ruby
+  trigger: rake-namespace
+  description: "namespace :dev do ... end"
+  mTime: 1535448799540
+  text: |
+        namespace :dev do
           ${1:}
-        </script> 
-
-- trigger: d3js
-  description: d3js
-  scope: html
-  mTime: 1456608208002
-  text: |
-        <script src="//d3js.org/d3.v3.min.js" charset="utf-8"></script>
-
-- scope: html
-  trigger: meta_viewport
-  description: meta viewport
-  mTime: 1511573969677
-  text: |
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-- scope: html
-  trigger: meta_keywords
-  description: meta keywords
-  mTime: 1511574206825
-  text: |
-        <meta name="keywords" content="HTML, CSS, XML, JavaScript">
-
-- scope: html
-  trigger: meta_author
-  description: meta author
-  mTime: 1511574403951
-  text: |
-        <meta name="author" content="John Doe">
-
-- scope: html
-  trigger: meta_description
-  description: meta description
-  mTime: 1511574469489
-  text: |
-        <meta name="description" content="Free Web tutorials">
-
-- scope: html
-  trigger: meta_charset
-  description: meta charset
-  mTime: 1511574485965
-  text: |
-        <meta charset="UTF-8">
-
-- trigger: form-group
-  description: form-group ...
-  scope: html
-  mTime: 1515229134117
-  text: |
-        <div class="form-group">
-          <%= f.label :${1:xxx}, "${2:ooo}" %>
-          <%= f.text_field :${3:xxx}, class: "form-control" %>
-        </div>
-
-- scope: html
-  trigger: viewport
-  description: meta viewport
-  mTime: 1528902902185
-  text: |
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-- trigger: link
-  description: "link_to ,... ,..."
-  scope: ruby
-  mTime: 1514387953323
-  text: |
-        link_to "${1:xxx}", ${2:xxx}_path${3:(xxx)}
-
-- trigger: resources
-  description: resources
-  scope: ruby
-  mTime: 1455993507161
-  text: |
-        resources :${1:xxxs}
-
-- trigger: def
-  description: def ... end
-  scope: ruby
-  mTime: 1510588889806
-  text: |
-        def ${1:method_name}
         end
 
-- trigger: root
-  description: root
-  scope: ruby
-  mTime: 1455995492732
+- scope: ruby
+  trigger: foreign_key
+  description: "foreign_key: \"category_id\""
+  mTime: 1532532730407
   text: |
-        root '${1:controllers}#${2:index}'
-
-- trigger: params
-  description: "params[:xx]"
-  scope: ruby
-  mTime: 1455997058291
-  text: |
-        params[:${1:id}]
-
-- trigger: ff
-  description: form_for ...
-  scope: ruby
-  mTime: 1456058720846
-  text: |
-        form_for ${1:@xxx} do |f|
-
-- trigger: flbl
-  description: f.label
-  scope: ruby
-  mTime: 1456058842963
-  text: f.label
-- trigger: ftxt
-  description: f.text_field
-  scope: ruby
-  mTime: 1456078324424
-  text: |
-        f.text_field :title
+        foreign_key: "${1:category_id}"
 
 - scope: ruby
-  description: f.submit
-  trigger: fsubmit
-  mTime: 1456058918018
-  text: f.submit
+  trigger: primary_key
+  description: "primary_key: \"id\""
+  mTime: 1532532747684
+  text: |
+        primary_key: "{1:id}"
+
 - scope: ruby
-  trigger: private
-  description: private
-  mTime: 1456062393279
-  text: private
-- trigger: validates
-  description: "validates :title"
-  scope: ruby
-  mTime: 1456063687905
+  trigger: class_name
+  description: "class_name: \"Xxxxx\""
+  mTime: 1532532634073
   text: |
-        validates :${1:title}
+        class_name: "${1:Restaurant}"
 
-- trigger: presence
-  description: "presence: true"
-  scope: ruby
-  mTime: 1532539934434
-  text: |
-        presence: true # 輸入的項目不能為空
-
-- trigger: ife
-  description: if ... else .. end
-  scope: ruby
-  mTime: 1456069162755
-  text: |
-        if ${1:xxx}
-        else
-        end
-
-- trigger: length
-  description: length
-  scope: ruby
-  mTime: 1509180271263
-  text: length
-- description: "message:"
-  trigger: message
-  scope: ruby
-  mTime: 1456072519873
-  text: |
-        message: 'xxx'
-
-- description: "minimum:"
-  scope: ruby
-  trigger: minimum
-  mTime: 1456072551712
-  text: |
-        minimum: 3
-
-- trigger: redirect_to
-  description: redirect_to xxx
-  scope: ruby
-  mTime: 1510587585065
-  text: |
-        redirect_to ${1:xxxs}_path
-
-- trigger: destroy
-  description: destroy
-  scope: ruby
-  mTime: 1456074513793
-  text: destroy
 - scope: ruby
-  trigger: default
-  description: "default: false"
-  mTime: 1536947241908
+  trigger: tcbi
+  description: Table column binary
+  mTime: 1527772171493
   text: |
-        default: ${1:false, 0}
+        t.binary   :${1:xxxx}
 
-- trigger: belongs_to
-  description: "belongs_to :xxx"
-  scope: ruby
-  mTime: 1512653828691
+- scope: ruby
+  description: Table column time
+  trigger: tcti
+  mTime: 1527772145994
   text: |
-        belongs_to :${1:xxx}
+        t.time     :${1:xxx}
 
-- trigger: has_many
-  description: "has_many :tasks"
-  scope: ruby
-  mTime: 1512653734258
+- scope: ruby
+  description: Table column date
+  trigger: tcda
+  mTime: 1527772055457
   text: |
-        has_many :${1:tasks}
+        t.date     :${1:xxx}
 
-- trigger: only
-  description: "only: [:create, :destroy]"
-  scope: ruby
-  mTime: 1513441067856
+- scope: ruby
+  description: Table column datetime
+  trigger: tcdt
+  mTime: 1527772017876
   text: |
-        only: [${1::xxx}, ${2::xxx}]
+        t.datetime :xxx
 
-- trigger: init
-  description: initialize
-  scope: ruby
-  mTime: 1509625201574
-  text: initialize
-- trigger: attr
-  description: attr_accessor
-  scope: ruby
-  mTime: 1510334379335
-  text: attr_accessor
-- trigger: ps
-  description: puts
-  scope: ruby
-  mTime: 1509635455233
+- scope: ruby
+  description: Table column numeric
+  trigger: tcn
+  mTime: 1527771944498
   text: |
-        puts ${1}
+        t.numeric  :${1:xxx}
+
+- scope: ruby
+  description: Table column decimal
+  trigger: tcd
+  mTime: 1527771874689
+  text: |
+        t.decimal  :${1:xxxx}
+
+- scope: ruby
+  description: Table column float
+  trigger: tcf
+  mTime: 1527771818048
+  text: |
+        t.float    :${1:xxx}
+
+- description: Table column text
+  trigger: tct
+  scope: ruby
+  mTime: 1527771779813
+  text: |
+        t.text     :${1:xxx}
+
+- trigger: tcb
+  description: Table column boolean
+  scope: ruby
+  mTime: 1527771625991
+  text: |
+        t.boolean  :${1:done}, default: false
+
+- trigger: tcs
+  description: Table column string
+  scope: ruby
+  mTime: 1527771651466
+  text: |
+        t.string   :${1:xxx}
+
+- trigger: tci
+  description: Table column integer
+  scope: ruby
+  mTime: 1527771638840
+  text: |
+        t.integer  :${1:user_id}
+
+- trigger: dependent_error
+  description: "dependent: :restrict_with_error"
+  scope: ruby
+  mTime: 1525513284328
+  text: |
+        dependent: :restrict_with_error
+
+- description: validates uniqueness
+  scope: ruby
+  trigger: validates_uniqueness
+  mTime: 1532539989043
+  text: |
+        validates :name, uniqueness: true # 輸入的名字不能重覆
+
+- scope: ruby
+  trigger: errors
+  description: "if @xxx.errors.any? ... end"
+  mTime: 1524344451963
+  text: |
+        <% if @restaurant.errors.any? %>
+          <h2>We have some errors here !</h2>
+          <ul>
+            <% @restaurant.errors.full_messages.each do |msg| %>
+              <li><%= msg %></li>
+            <% end %>
+          </ul>
+        <% end %>
+
+- trigger: gem-annotate
+  description: annotate
+  scope: ruby
+  mTime: 1541569301951
+  text: |
+        gem 'annotate'
+
+- trigger: gem-bootstrap-4-1-3
+  description: bootstrap 4.1.3
+  scope: ruby
+  mTime: 1536944216929
+  text: |
+        gem 'bootstrap', '~> 4.1.3'
+
+- scope: ruby
+  trigger: gem-bootstrap
+  description: bootstrap-sass 3.3.7
+  mTime: 1541573356312
+  text: |
+        gem 'bootstrap-sass', '~> 3.3.7'
+
+- trigger: gem-capistrano
+  description: capistrano-rails
+  scope: ruby
+  mTime: 1541569312292
+  text: |
+        gem 'capistrano-rails'
+        gem 'capistrano-passenger'
+
+- scope: ruby
+  trigger: gem-carrierwave
+  description: carrierwave
+  mTime: 1524410890414
+  text: |
+        gem 'carrierwave'
+
+- trigger: gem-chronic
+  description: chronic
+  scope: ruby
+  mTime: 1541569278911
+  text: |
+        gem 'chronic'
+
+- scope: ruby
+  description: cocoon
+  trigger: gem-cocoon
+  mTime: 1541569329165
+  text: |
+        gem 'cocoon'
+
+- description: devise
+  scope: ruby
+  trigger: gem-devise
+  mTime: 1524410899475
+  text: |
+        gem 'devise'
+
+- trigger: gem-ffaker
+  scope: ruby
+  description: ffaker
+  mTime: 1524410905118
+  text: |
+        gem 'ffaker'
+
+- description: font-awesome-rails
+  trigger: gem-font-awesome-rails
+  scope: ruby
+  mTime: 1541569339236
+  text: |
+        gem 'font-awesome-rails'
+
+- scope: ruby
+  trigger: gem-impressionist
+  description: impressionist
+  mTime: 1524410927624
+  text: |
+        gem 'impressionist'
 
 - scope: ruby
   trigger: gem-init
@@ -321,356 +406,6 @@
         end
         
         gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
-
-- scope: ruby
-  trigger: gem-bootstrap
-  description: bootstrap-sass
-  mTime: 1524410874697
-  text: |
-        gem 'bootstrap-sass', '~> 3.3.7'
-
-- scope: ruby
-  trigger: gem-carrierwave
-  description: carrierwave
-  mTime: 1524410890414
-  text: |
-        gem 'carrierwave'
-
-- description: devise
-  scope: ruby
-  trigger: gem-devise
-  mTime: 1524410899475
-  text: |
-        gem 'devise'
-
-- description: "before_action :xxxx"
-  trigger: bef
-  scope: ruby
-  mTime: 1511966536380
-  text: |
-        before_action :${1:method_name}
-
-- trigger: auth
-  description: "devise - authenticate_user!"
-  scope: ruby
-  mTime: 1511966574889
-  text: |
-        authenticate_user!
-
-- trigger: validates_presence_of
-  description: validates_presence_of
-  scope: ruby
-  mTime: 1511973432862
-  text: |
-        validates_presence_of :${1:xxxx}
-
-- trigger: t_add
-  description: "t: add_column"
-  scope: ruby
-  mTime: 1512141225342
-  text: |
-        add_column :${1:tablenames}, :${2:column}, :${3:datatype}
-
-- scope: ruby
-  description: "mount_uploader :image, PhotoUploader"
-  trigger: mount_uploader
-  mTime: 1512141309840
-  text: |
-        mount_uploader :${1:image}, ${2:PhotoUploader}
-
-- trigger: gem-ffaker
-  scope: ruby
-  description: ffaker
-  mTime: 1524410905118
-  text: |
-        gem 'ffaker'
-
-- trigger: gem-kaminari
-  description: kaminari
-  scope: ruby
-  mTime: 1524410945782
-  text: |
-        gem 'kaminari'
-
-- trigger: gem-jquery-rails
-  description: jquery-rails
-  scope: ruby
-  mTime: 1524410957331
-  text: |
-        gem 'jquery-rails'
-
-- trigger: add_column
-  scope: ruby
-  description: add_column
-  mTime: 1512488698666
-  text: |
-        add_column :${1:tablename}s, :${2:column}, :${3:datatype}
-
-- scope: ruby
-  description: "optional: true # 允許外鍵 nil"
-  trigger: optional
-  mTime: 1513343716416
-  text: |
-        optional: true # 允許外鍵 nil
-
-- scope: ruby
-  trigger: gem-impressionist
-  description: impressionist
-  mTime: 1524410927624
-  text: |
-        gem 'impressionist'
-
-- trigger: impressionist
-  scope: ruby
-  description: impressionist
-  mTime: 1513851210151
-  text: |
-        impressionist :actions => [${1::show}]
-
-- scope: ruby
-  trigger: get_to
-  description: routes get ...
-  mTime: 1514139354691
-  text: |
-        get "/hello_world", to: "pages#hello"
-
-- trigger: collection
-  description: collection  do ... end
-  scope: ruby
-  mTime: 1514311952236
-  text: |
-        collection do
-          get ${1::feeds}
-        end
-
-- scope: ruby
-  trigger: dependent_destroy
-  description: "dependent: :destroy"
-  mTime: 1536947429630
-  text: |
-        dependent: :destroy # master 刪掉的話，detail 也會跟著刪除
-
-- scope: ruby
-  trigger: has_many_through
-  description: "has_many: through"
-  mTime: 1514387273308
-  text: |
-        has_many :favorited_restaurants, through: :favorites, source: :restaurant
-
-- scope: ruby
-  trigger: redirect_back
-  description: redirect_back... 導回上一頁
-  mTime: 1514388260304
-  text: |
-        redirect_back(fallback_location: root_path)  # 導回上一頁
-
-- trigger: gem-annotate
-  description: "gem 'annotate'"
-  scope: ruby
-  mTime: 1524410869359
-  text: |
-        gem 'annotate'
-
-- trigger: has_many_through_source
-  description: "throuth: ..., source: ..."
-  scope: ruby
-  mTime: 1536947504470
-  text: |
-        has_many :${1:favorited_restaurants}, through: :${2:favorites}, source: :${3:restaurant}
-
-- trigger: uniqueness
-  scope: ruby
-  description: "uniqueness: { scope: :user_id }"
-  mTime: 1515000408440
-  text: |
-        uniqueness: { scope: :user_id }
-
-- trigger: before_save
-  description: "before_save :method_name"
-  scope: ruby
-  mTime: 1515004076141
-  text: |
-        before_save :method_name
-
-- scope: ruby
-  trigger: truncate
-  description: truncate ...
-  mTime: 1515080330888
-  text: |
-        truncate(xxx.ooo, length: 200)
-
-- scope: ruby
-  trigger: validates_presence
-  description: "validates :field_name presence:true"
-  mTime: 1516111150877
-  text: |
-        validates :${1:field_name}, presence: true
-
-- trigger: gem-pg
-  scope: ruby
-  description: gem pg 0.11
-  mTime: 1524410977125
-  text: |
-        group :production do
-          gem 'pg', '~> 0.11'
-        end
-
-- trigger: rename_column
-  description: rename_column
-  scope: ruby
-  mTime: 1520706138501
-  text: |
-        rename_column :${1:table_name_s}, :${2:old_field_name}, :${3:new_field_name}
-
-- trigger: change_column
-  description: change_column
-  scope: ruby
-  mTime: 1520773101587
-  text: |
-        change_column :${1:table_name}, :${2:column_name}, :${3:datatype}
-
-- trigger: gem-roo
-  description: "gem 'roo', '~> 2.7.0'"
-  scope: ruby
-  mTime: 1524410982202
-  text: |
-        gem 'roo', '~> 2.7.0'
-
-- trigger: task
-  description: task do ... end
-  scope: ruby
-  mTime: 1521962737642
-  text: |
-        task fake_${1:xxxs}: :environment do
-          ${2:}
-        end
-
-- scope: ruby
-  description: render partial
-  trigger: render_partial
-  mTime: 1521970850443
-  text: |
-        render partial: "${1:common/navbar}"
-
-- trigger: gem-simple_form
-  scope: ruby
-  description: "gem 'simple_form'"
-  mTime: 1524410991985
-  text: |
-        gem 'simple_form'
-
-- description: "gem 'mini_magick'"
-  scope: ruby
-  trigger: gem-mini_magick
-  mTime: 1524410972222
-  text: |
-        gem 'mini_magick'
-
-- trigger: layout
-  description: "layout \"xxx\""
-  scope: ruby
-  mTime: 1522144542796
-  text: |
-        layout "${1:admin}"
-
-- description: "gem 'font-awesome-rails'"
-  trigger: gem-font-awesome-rails
-  scope: ruby
-  mTime: 1524410921851
-  text: |
-        gem 'font-awesome-rails'
-
-- scope: ruby
-  trigger: remove_column
-  description: remove_column ...
-  mTime: 1522572234823
-  text: |
-        remove_column :${1:tables}, :${2:column}, :${3:datatype}
-
-- trigger: scope
-  description: "scope :xxx, -> { ... }"
-  scope: ruby
-  mTime: 1522814534225
-  text: |
-        scope :${1:your_naming}, -> { where(${2:resigned}: ${3:false}) }
-
-- trigger: back
-  description: "<%= link_to \"Back\", :back %>"
-  scope: ruby
-  mTime: 1522819953816
-  text: |
-        link_to "Back", :back
-
-- trigger: gem-mysql
-  description: "gem 'mysql2'"
-  scope: ruby
-  mTime: 1524410963148
-  text: |
-        gem 'mysql2'
-
-- trigger: gem-capistrano
-  description: "gem 'capistrano-rails'"
-  scope: ruby
-  mTime: 1524410883959
-  text: |
-        gem 'capistrano-rails'
-        gem 'capistrano-passenger'
-
-- trigger: require_relative
-  description: "require_relative '...'"
-  scope: ruby
-  mTime: 1523127706848
-  text: |
-        require_relative '${1:fizzbuzz}.rb'
-
-- description: "gem 'rspec'"
-  scope: ruby
-  trigger: gem-rspec
-  mTime: 1524410987198
-  text: |
-        gem 'rspec'
-
-- scope: ruby
-  trigger: errors
-  description: "if @xxx.errors.any? ... end"
-  mTime: 1524344451963
-  text: |
-        <% if @restaurant.errors.any? %>
-          <h2>We have some errors here !</h2>
-          <ul>
-            <% @restaurant.errors.full_messages.each do |msg| %>
-              <li><%= msg %></li>
-            <% end %>
-          </ul>
-        <% end %>
-
-- description: validates uniqueness
-  scope: ruby
-  trigger: validates_uniqueness
-  mTime: 1532539989043
-  text: |
-        validates :name, uniqueness: true # 輸入的名字不能重覆
-
-- trigger: dependent_error
-  description: "dependent: :restrict_with_error"
-  scope: ruby
-  mTime: 1525513284328
-  text: |
-        dependent: :restrict_with_error
-
-- trigger: tci
-  description: Table column integer
-  scope: ruby
-  mTime: 1527771638840
-  text: |
-        t.integer  :${1:user_id}
-
-- trigger: tcs
-  description: Table column string
-  scope: ruby
-  mTime: 1527771651466
-  text: |
-        t.string   :${1:xxx}
 
 - scope: ruby
   trigger: gem-init_5_1_6
@@ -709,97 +444,33 @@
         
         gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
         
-
-- trigger: tcb
-  description: Table column boolean
+- trigger: gem-jquery-rails
+  description: jquery-rails
   scope: ruby
-  mTime: 1527771625991
+  mTime: 1524410957331
   text: |
-        t.boolean  :${1:done}, default: false
+        gem 'jquery-rails'
 
-- description: Table column text
-  trigger: tct
+- trigger: gem-kaminari
+  description: kaminari
   scope: ruby
-  mTime: 1527771779813
+  mTime: 1524410945782
   text: |
-        t.text     :${1:xxx}
+        gem 'kaminari'
 
-- description: Table column float
+- description: mini_magick
   scope: ruby
-  trigger: tcf
-  mTime: 1527771818048
+  trigger: gem-mini_magick
+  mTime: 1541569377256
   text: |
-        t.float    :${1:xxx}
+        gem 'mini_magick'
 
-- description: Table column decimal
+- trigger: gem-mysql
+  description: mysql2
   scope: ruby
-  trigger: tcd
-  mTime: 1527771874689
+  mTime: 1541569390238
   text: |
-        t.decimal  :${1:xxxx}
-
-- scope: ruby
-  description: Table column numeric
-  trigger: tcn
-  mTime: 1527771944498
-  text: |
-        t.numeric  :${1:xxx}
-
-- description: Table column datetime
-  trigger: tcdt
-  scope: ruby
-  mTime: 1527772017876
-  text: |
-        t.datetime :xxx
-
-- description: Table column date
-  scope: ruby
-  trigger: tcda
-  mTime: 1527772055457
-  text: |
-        t.date     :${1:xxx}
-
-- description: Table column time
-  trigger: tcti
-  scope: ruby
-  mTime: 1527772145994
-  text: |
-        t.time     :${1:xxx}
-
-- trigger: tcbi
-  description: Table column binary
-  scope: ruby
-  mTime: 1527772171493
-  text: |
-        t.binary   :${1:xxxx}
-
-- scope: ruby
-  description: "gem 'cocoon'"
-  trigger: gem-cocoon
-  mTime: 1528557833412
-  text: |
-        gem 'cocoon'
-
-- scope: ruby
-  trigger: class_name
-  description: "class_name: \"Xxxxx\""
-  mTime: 1532532634073
-  text: |
-        class_name: "${1:Restaurant}"
-
-- trigger: primary_key
-  description: "primary_key: \"id\""
-  scope: ruby
-  mTime: 1532532747684
-  text: |
-        primary_key: "{1:id}"
-
-- trigger: foreign_key
-  description: "foreign_key: \"category_id\""
-  scope: ruby
-  mTime: 1532532730407
-  text: |
-        foreign_key: "${1:category_id}"
+        gem 'mysql2'
 
 - trigger: gem-omniauth-github
   description: omniauth-github
@@ -808,79 +479,408 @@
   text: |
         gem 'omniauth-github'
 
-- trigger: rake-namespace
-  description: "namespace :dev do ... end"
+- trigger: gem-pg
   scope: ruby
-  mTime: 1535448799540
+  description: pg 0.11
+  mTime: 1541569412535
   text: |
-        namespace :dev do
-          ${1:}
-        end
-        
-
-- trigger: rake-task
-  description: "task xxx: :envir do ... end"
-  scope: ruby
-  mTime: 1535449186452
-  text: |
-        task fake_products: :environment do
-          Product.destroy_all
-          100.times do
-            Product.create!(
-              name: FFaker::Name.first_name,
-              description: FFaker::Lorem.paragraph,
-              price: ( rand(500)+1 ) * 10,
-              image: FFaker::Avatar.image
-            )
-          end
-          
-          puts "have created fake products"
-          puts "now you have #{Product.count} products record"
+        group :production do
+          gem 'pg', '~> 0.11'
         end
 
-- trigger: gem-bootstrap-4-1-3
-  description: bootstrap 4.1.3
+- trigger: gem-roo
+  description: roo
   scope: ruby
-  mTime: 1536944216929
+  mTime: 1541569424873
   text: |
-        gem 'bootstrap', '~> 4.1.3'
+        gem 'roo', '~> 2.7.0'
 
-- trigger: change_column_default
-  description: change_column_default
+- description: rspec
   scope: ruby
-  mTime: 1536953181932
+  trigger: gem-rspec
+  mTime: 1541571099907
   text: |
-        change_column_default :cart_items, :quantity, 1
+        gem 'rspec'
+
+- trigger: gem-simple_form
+  scope: ruby
+  description: simple_form
+  mTime: 1541571106611
+  text: |
+        gem 'simple_form'
 
 - scope: ruby
-  trigger: ns
-  description: namespace
-  mTime: 1540681591056
+  description: render partial
+  trigger: render_partial
+  mTime: 1521970850443
   text: |
-        namespace :${1:admin} do
+        render partial: "${1:common/navbar}"
+
+- trigger: task
+  description: task do ... end
+  scope: ruby
+  mTime: 1521962737642
+  text: |
+        task fake_${1:xxxs}: :environment do
           ${2:}
         end
 
-- scope: erb_html
-  trigger: tghj
-  description: tghj
-  mTime: 1510239784733
-  text: tgggdtgddg
-- scope: erb_html
-  trigger: ife
-  description: if... else... end
-  mTime: 1511969100838
+- trigger: back
+  description: "<%= link_to \"Back\", :back %>"
+  scope: ruby
+  mTime: 1522819953816
   text: |
-        <% if ${1:} %>
-        <% else %>
-        <% end %>
+        link_to "Back", :back
+
+- trigger: scope
+  description: "scope :xxx, -> { ... }"
+  scope: ruby
+  mTime: 1522814534225
+  text: |
+        scope :${1:your_naming}, -> { where(${2:resigned}: ${3:false}) }
+
+- trigger: require_relative
+  description: "require_relative '...'"
+  scope: ruby
+  mTime: 1523127706848
+  text: |
+        require_relative '${1:fizzbuzz}.rb'
+
+- trigger: layout
+  description: "layout \"xxx\""
+  scope: ruby
+  mTime: 1522144542796
+  text: |
+        layout "${1:admin}"
+
+- scope: ruby
+  trigger: remove_column
+  description: remove_column ...
+  mTime: 1522572234823
+  text: |
+        remove_column :${1:tables}, :${2:column}, :${3:datatype}
+
+- trigger: change_column
+  description: change_column
+  scope: ruby
+  mTime: 1520773101587
+  text: |
+        change_column :${1:table_name}, :${2:column_name}, :${3:datatype}
+
+- trigger: rename_column
+  description: rename_column
+  scope: ruby
+  mTime: 1520706138501
+  text: |
+        rename_column :${1:table_name_s}, :${2:old_field_name}, :${3:new_field_name}
+
+
+
+- scope: ruby
+  trigger: validates_presence
+  description: "validates :field_name presence:true"
+  mTime: 1516111150877
+  text: |
+        validates :${1:field_name}, presence: true
+
+- scope: ruby
+  trigger: truncate
+  description: truncate ...
+  mTime: 1515080330888
+  text: |
+        truncate(xxx.ooo, length: 200)
+
+- trigger: before_save
+  description: "before_save :method_name"
+  scope: ruby
+  mTime: 1515004076141
+  text: |
+        before_save :method_name
+
+- trigger: uniqueness
+  scope: ruby
+  description: "uniqueness: { scope: :user_id }"
+  mTime: 1515000408440
+  text: |
+        uniqueness: { scope: :user_id }
+
+- trigger: has_many_through_source
+  description: "throuth: ..., source: ..."
+  scope: ruby
+  mTime: 1536947504470
+  text: |
+        has_many :${1:favorited_restaurants}, through: :${2:favorites}, source: :${3:restaurant}
+
+- scope: ruby
+  trigger: redirect_back
+  description: redirect_back... 導回上一頁
+  mTime: 1514388260304
+  text: |
+        redirect_back(fallback_location: root_path)  # 導回上一頁
+
+- scope: ruby
+  trigger: has_many_through
+  description: "has_many: through"
+  mTime: 1514387273308
+  text: |
+        has_many :favorited_restaurants, through: :favorites, source: :restaurant
+
+- scope: ruby
+  trigger: dependent_destroy
+  description: "dependent: :destroy"
+  mTime: 1536947429630
+  text: |
+        dependent: :destroy # master 刪掉的話，detail 也會跟著刪除
+
+- trigger: collection
+  description: collection  do ... end
+  scope: ruby
+  mTime: 1514311952236
+  text: |
+        collection do
+          get ${1::feeds}
+        end
+
+- scope: ruby
+  trigger: get_to
+  description: routes get ...
+  mTime: 1514139354691
+  text: |
+        get "/hello_world", to: "pages#hello"
+
+- trigger: impressionist
+  scope: ruby
+  description: impressionist
+  mTime: 1513851210151
+  text: |
+        impressionist :actions => [${1::show}]
+
+- scope: ruby
+  description: "optional: true # 允許外鍵 nil"
+  trigger: optional
+  mTime: 1513343716416
+  text: |
+        optional: true # 允許外鍵 nil
+
+- trigger: add_column
+  scope: ruby
+  description: add_column
+  mTime: 1512488698666
+  text: |
+        add_column :${1:tablename}s, :${2:column}, :${3:datatype}
+
+- scope: ruby
+  description: "mount_uploader :image, PhotoUploader"
+  trigger: mount_uploader
+  mTime: 1512141309840
+  text: |
+        mount_uploader :${1:image}, ${2:PhotoUploader}
+
+- trigger: t_add
+  description: "t: add_column"
+  scope: ruby
+  mTime: 1512141225342
+  text: |
+        add_column :${1:tablenames}, :${2:column}, :${3:datatype}
+
+- trigger: validates_presence_of
+  description: validates_presence_of
+  scope: ruby
+  mTime: 1511973432862
+  text: |
+        validates_presence_of :${1:xxxx}
+
+- trigger: auth
+  description: "devise - authenticate_user!"
+  scope: ruby
+  mTime: 1511966574889
+  text: |
+        authenticate_user!
+
+- description: "before_action :xxxx"
+  trigger: bef
+  scope: ruby
+  mTime: 1511966536380
+  text: |
+        before_action :${1:method_name}
+
+- trigger: ps
+  description: puts
+  scope: ruby
+  mTime: 1509635455233
+  text: |
+        puts ${1}
+
+- trigger: attr
+  description: attr_accessor
+  scope: ruby
+  mTime: 1510334379335
+  text: attr_accessor
+- trigger: init
+  description: initialize
+  scope: ruby
+  mTime: 1509625201574
+  text: initialize
+- trigger: only
+  description: "only: [:create, :destroy]"
+  scope: ruby
+  mTime: 1513441067856
+  text: |
+        only: [${1::xxx}, ${2::xxx}]
+
+- trigger: has_many
+  description: "has_many :tasks"
+  scope: ruby
+  mTime: 1512653734258
+  text: |
+        has_many :${1:tasks}
+
+- trigger: belongs_to
+  description: "belongs_to :xxx"
+  scope: ruby
+  mTime: 1512653828691
+  text: |
+        belongs_to :${1:xxx}
+
+- scope: ruby
+  trigger: default
+  description: "default: false"
+  mTime: 1536947241908
+  text: |
+        default: ${1:false, 0}
+
+- trigger: destroy
+  description: destroy
+  scope: ruby
+  mTime: 1456074513793
+  text: destroy
+- trigger: redirect_to
+  description: redirect_to xxx
+  scope: ruby
+  mTime: 1510587585065
+  text: |
+        redirect_to ${1:xxxs}_path
+
+- description: "minimum:"
+  scope: ruby
+  trigger: minimum
+  mTime: 1456072551712
+  text: |
+        minimum: 3
+
+- description: "message:"
+  trigger: message
+  scope: ruby
+  mTime: 1456072519873
+  text: |
+        message: 'xxx'
+
+- trigger: length
+  description: length
+  scope: ruby
+  mTime: 1509180271263
+  text: length
+- trigger: ife
+  description: if ... else .. end
+  scope: ruby
+  mTime: 1456069162755
+  text: |
+        if ${1:xxx}
+        else
+        end
+
+- trigger: presence
+  description: "presence: true"
+  scope: ruby
+  mTime: 1532539934434
+  text: |
+        presence: true # 輸入的項目不能為空
+
+- trigger: validates
+  description: "validates :title"
+  scope: ruby
+  mTime: 1456063687905
+  text: |
+        validates :${1:title}
+
+- scope: ruby
+  trigger: private
+  description: private
+  mTime: 1456062393279
+  text: private
+- scope: ruby
+  description: f.submit
+  trigger: fsubmit
+  mTime: 1456058918018
+  text: f.submit
+- trigger: ftxt
+  description: f.text_field
+  scope: ruby
+  mTime: 1456078324424
+  text: |
+        f.text_field :title
+
+- trigger: flbl
+  description: f.label
+  scope: ruby
+  mTime: 1456058842963
+  text: f.label
+- trigger: ff
+  description: form_for ...
+  scope: ruby
+  mTime: 1456058720846
+  text: |
+        form_for ${1:@xxx} do |f|
+
+- trigger: params
+  description: "params[:xx]"
+  scope: ruby
+  mTime: 1455997058291
+  text: |
+        params[:${1:id}]
+
+- trigger: root
+  description: root
+  scope: ruby
+  mTime: 1455995492732
+  text: |
+        root '${1:controllers}#${2:index}'
+
+- trigger: def
+  description: def ... end
+  scope: ruby
+  mTime: 1510588889806
+  text: |
+        def ${1:method_name}
+        end
+
+- trigger: resources
+  description: resources
+  scope: ruby
+  mTime: 1455993507161
+  text: |
+        resources :${1:xxxs}
+
+- trigger: link
+  description: "link_to ,... ,..."
+  scope: ruby
+  mTime: 1514387953323
+  text: |
+        link_to "${1:xxx}", ${2:xxx}_path${3:(xxx)}
+
+- trigger: b_green
+  description: 標示用
+  scope: css
+  mTime: 1514047763636
+  text: |
+        border: 1px solid green; /* 標示用，排版完記得拿掉 */
 
 - scope: css
+  trigger: b_blue
   description: 標示用
-  trigger: b_red
-  mTime: 1514047651232
+  mTime: 1514047695651
   text: |
-        border: 1px solid red; /* 標示用，排版完記得拿掉 */
+        border: 1px solid blue; /* 標示用，排版完記得拿掉 */
 
 - scope: css
   description: 標示用
@@ -890,16 +890,23 @@
         border: 1px solid yellow; /* 標示用，排版完記得拿掉 */
 
 - scope: css
-  trigger: b_blue
   description: 標示用
-  mTime: 1514047695651
+  trigger: b_red
+  mTime: 1514047651232
   text: |
-        border: 1px solid blue; /* 標示用，排版完記得拿掉 */
+        border: 1px solid red; /* 標示用，排版完記得拿掉 */
 
-- trigger: b_green
-  description: 標示用
-  scope: css
-  mTime: 1514047763636
+- scope: erb_html
+  trigger: ife
+  description: if... else... end
+  mTime: 1511969100838
   text: |
-        border: 1px solid green; /* 標示用，排版完記得拿掉 */
+        <% if ${1:} %>
+        <% else %>
+        <% end %>
 
+- scope: erb_html
+  trigger: tghj
+  description: tghj
+  mTime: 1510239784733
+  text: tgggdtgddg
