@@ -245,43 +245,43 @@
   text: |
         t.float    :${1:xxx}
 
-- description: Table column text
+- scope: ruby
+  description: Table column text
   trigger: tct
-  scope: ruby
   mTime: 1527771779813
   text: |
         t.text     :${1:xxx}
 
-- trigger: tcb
+- scope: ruby
+  trigger: tcb
   description: Table column boolean
-  scope: ruby
   mTime: 1527771625991
   text: |
         t.boolean  :${1:done}, default: false
 
-- trigger: tcs
+- scope: ruby
+  trigger: tcs
   description: Table column string
-  scope: ruby
   mTime: 1527771651466
   text: |
         t.string   :${1:xxx}
 
-- trigger: tci
+- scope: ruby
+  trigger: tci
   description: Table column integer
-  scope: ruby
   mTime: 1527771638840
   text: |
         t.integer  :${1:user_id}
 
-- trigger: dependent_error
+- scope: ruby
+  trigger: dependent_error
   description: "dependent: :restrict_with_error"
-  scope: ruby
   mTime: 1525513284328
   text: |
         dependent: :restrict_with_error
 
-- description: validates uniqueness
-  scope: ruby
+- scope: ruby
+  description: validates uniqueness
   trigger: validates_uniqueness
   mTime: 1532539989043
   text: |
@@ -301,16 +301,16 @@
           </ul>
         <% end %>
 
-- trigger: gem-annotate
+- scope: ruby
+  trigger: gem-annotate
   description: annotate
-  scope: ruby
   mTime: 1541569301951
   text: |
         gem 'annotate'
 
-- trigger: gem-bootstrap-4-1-3
+- scope: ruby
+  trigger: gem-bootstrap-4-1-3
   description: bootstrap 4.1.3
-  scope: ruby
   mTime: 1536944216929
   text: |
         gem 'bootstrap', '~> 4.1.3'
@@ -322,9 +322,9 @@
   text: |
         gem 'bootstrap-sass', '~> 3.3.7'
 
-- trigger: gem-capistrano
+- scope: ruby
+  trigger: gem-capistrano
   description: capistrano-rails
-  scope: ruby
   mTime: 1541569312292
   text: |
         gem 'capistrano-rails'
@@ -337,9 +337,9 @@
   text: |
         gem 'carrierwave'
 
-- trigger: gem-chronic
+- scope: ruby
+  trigger: gem-chronic
   description: chronic
-  scope: ruby
   mTime: 1541569278911
   text: |
         gem 'chronic'
@@ -351,23 +351,23 @@
   text: |
         gem 'cocoon'
 
-- description: devise
-  scope: ruby
+- scope: ruby
+  description: devise
   trigger: gem-devise
   mTime: 1524410899475
   text: |
         gem 'devise'
 
-- trigger: gem-ffaker
-  scope: ruby
+- scope: ruby
+  trigger: gem-ffaker
   description: ffaker
   mTime: 1524410905118
   text: |
         gem 'ffaker'
 
-- description: font-awesome-rails
+- scope: ruby
+  description: font-awesome-rails
   trigger: gem-font-awesome-rails
-  scope: ruby
   mTime: 1541569339236
   text: |
         gem 'font-awesome-rails'
@@ -444,43 +444,43 @@
         
         gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
         
-- trigger: gem-jquery-rails
+- scope: ruby
+  trigger: gem-jquery-rails
   description: jquery-rails
-  scope: ruby
   mTime: 1524410957331
   text: |
         gem 'jquery-rails'
 
-- trigger: gem-kaminari
+- scope: ruby
+  trigger: gem-kaminari
   description: kaminari
-  scope: ruby
   mTime: 1524410945782
   text: |
         gem 'kaminari'
 
-- description: mini_magick
-  scope: ruby
+- scope: ruby
+  description: mini_magick
   trigger: gem-mini_magick
   mTime: 1541569377256
   text: |
         gem 'mini_magick'
 
-- trigger: gem-mysql
+- scope: ruby
+  trigger: gem-mysql
   description: mysql2
-  scope: ruby
   mTime: 1541569390238
   text: |
         gem 'mysql2'
 
-- trigger: gem-omniauth-github
+- scope: ruby
+  trigger: gem-omniauth-github
   description: omniauth-github
-  scope: ruby
   mTime: 1532806171993
   text: |
         gem 'omniauth-github'
 
-- trigger: gem-pg
-  scope: ruby
+- scope: ruby
+  trigger: gem-pg
   description: pg 0.11
   mTime: 1541569412535
   text: |
@@ -488,22 +488,22 @@
           gem 'pg', '~> 0.11'
         end
 
-- trigger: gem-roo
+- scope: ruby
+  trigger: gem-roo
   description: roo
-  scope: ruby
   mTime: 1541569424873
   text: |
         gem 'roo', '~> 2.7.0'
 
-- description: rspec
-  scope: ruby
+- scope: ruby
+  description: rspec
   trigger: gem-rspec
   mTime: 1541571099907
   text: |
         gem 'rspec'
 
-- trigger: gem-simple_form
-  scope: ruby
+- scope: ruby
+  trigger: gem-simple_form
   description: simple_form
   mTime: 1541571106611
   text: |
@@ -516,39 +516,39 @@
   text: |
         render partial: "${1:common/navbar}"
 
-- trigger: task
+- scope: ruby
+  trigger: task
   description: task do ... end
-  scope: ruby
   mTime: 1521962737642
   text: |
         task fake_${1:xxxs}: :environment do
           ${2:}
         end
 
-- trigger: back
+- scope: ruby
+  trigger: back
   description: "<%= link_to \"Back\", :back %>"
-  scope: ruby
   mTime: 1522819953816
   text: |
         link_to "Back", :back
 
-- trigger: scope
+- scope: ruby
+  trigger: scope
   description: "scope :xxx, -> { ... }"
-  scope: ruby
   mTime: 1522814534225
   text: |
         scope :${1:your_naming}, -> { where(${2:resigned}: ${3:false}) }
 
-- trigger: require_relative
+- scope: ruby
+  trigger: require_relative
   description: "require_relative '...'"
-  scope: ruby
   mTime: 1523127706848
   text: |
         require_relative '${1:fizzbuzz}.rb'
 
-- trigger: layout
+- scope: ruby
+  trigger: layout
   description: "layout \"xxx\""
-  scope: ruby
   mTime: 1522144542796
   text: |
         layout "${1:admin}"
@@ -560,9 +560,9 @@
   text: |
         remove_column :${1:tables}, :${2:column}, :${3:datatype}
 
-- trigger: change_column
+- scope: ruby
+  trigger: change_column
   description: change_column
-  scope: ruby
   mTime: 1520773101587
   text: |
         change_column :${1:table_name}, :${2:column_name}, :${3:datatype}
@@ -573,8 +573,6 @@
   mTime: 1520706138501
   text: |
         rename_column :${1:table_name_s}, :${2:old_field_name}, :${3:new_field_name}
-
-
 
 - scope: ruby
   trigger: validates_presence
@@ -590,23 +588,23 @@
   text: |
         truncate(xxx.ooo, length: 200)
 
-- trigger: before_save
+- scope: ruby
+  trigger: before_save
   description: "before_save :method_name"
-  scope: ruby
   mTime: 1515004076141
   text: |
         before_save :method_name
 
-- trigger: uniqueness
-  scope: ruby
+- scope: ruby
+  trigger: uniqueness
   description: "uniqueness: { scope: :user_id }"
   mTime: 1515000408440
   text: |
         uniqueness: { scope: :user_id }
 
-- trigger: has_many_through_source
+- scope: ruby
+  trigger: has_many_through_source
   description: "throuth: ..., source: ..."
-  scope: ruby
   mTime: 1536947504470
   text: |
         has_many :${1:favorited_restaurants}, through: :${2:favorites}, source: :${3:restaurant}
@@ -632,9 +630,9 @@
   text: |
         dependent: :destroy # master 刪掉的話，detail 也會跟著刪除
 
-- trigger: collection
+- scope: ruby
+  trigger: collection
   description: collection  do ... end
-  scope: ruby
   mTime: 1514311952236
   text: |
         collection do
@@ -648,8 +646,8 @@
   text: |
         get "/hello_world", to: "pages#hello"
 
-- trigger: impressionist
-  scope: ruby
+- scope: ruby
+  trigger: impressionist
   description: impressionist
   mTime: 1513851210151
   text: |
@@ -662,8 +660,8 @@
   text: |
         optional: true # 允許外鍵 nil
 
-- trigger: add_column
-  scope: ruby
+- scope: ruby
+  trigger: add_column
   description: add_column
   mTime: 1512488698666
   text: |
@@ -676,68 +674,63 @@
   text: |
         mount_uploader :${1:image}, ${2:PhotoUploader}
 
-- trigger: t_add
+- scope: ruby
+  trigger: t_add
   description: "t: add_column"
-  scope: ruby
   mTime: 1512141225342
   text: |
         add_column :${1:tablenames}, :${2:column}, :${3:datatype}
 
-- trigger: validates_presence_of
+- scope: ruby
+  trigger: validates_presence_of
   description: validates_presence_of
-  scope: ruby
   mTime: 1511973432862
   text: |
         validates_presence_of :${1:xxxx}
 
-- trigger: auth
+- scope: ruby
+  trigger: auth
   description: "devise - authenticate_user!"
-  scope: ruby
   mTime: 1511966574889
   text: |
         authenticate_user!
 
-- description: "before_action :xxxx"
+- scope: ruby
+  description: "before_action :xxxx"
   trigger: bef
-  scope: ruby
   mTime: 1511966536380
   text: |
         before_action :${1:method_name}
 
-- trigger: ps
-  description: puts
-  scope: ruby
-  mTime: 1509635455233
-  text: |
-        puts ${1}
-
-- trigger: attr
+- scope: ruby
+  trigger: attr
   description: attr_accessor
-  scope: ruby
   mTime: 1510334379335
   text: attr_accessor
-- trigger: init
+
+- scope: ruby
+  trigger: init
   description: initialize
-  scope: ruby
   mTime: 1509625201574
   text: initialize
-- trigger: only
+
+- scope: ruby
+  trigger: only
   description: "only: [:create, :destroy]"
-  scope: ruby
   mTime: 1513441067856
   text: |
         only: [${1::xxx}, ${2::xxx}]
 
-- trigger: has_many
+- scope: ruby
+  trigger: has_many
   description: "has_many :tasks"
-  scope: ruby
   mTime: 1512653734258
   text: |
         has_many :${1:tasks}
 
-- trigger: belongs_to
+- scope: ruby
+  trigger: belongs_to
   description: "belongs_to :xxx"
-  scope: ruby
   mTime: 1512653828691
   text: |
         belongs_to :${1:xxx}
@@ -749,37 +742,39 @@
   text: |
         default: ${1:false, 0}
 
-- trigger: destroy
+- scope: ruby
+  trigger: destroy
   description: destroy
-  scope: ruby
   mTime: 1456074513793
   text: destroy
-- trigger: redirect_to
+
+- scope: ruby
+  trigger: redirect_to
   description: redirect_to xxx
-  scope: ruby
   mTime: 1510587585065
   text: |
         redirect_to ${1:xxxs}_path
 
-- description: "minimum:"
-  scope: ruby
+- scope: ruby
+  description: "minimum:"
   trigger: minimum
   mTime: 1456072551712
   text: |
         minimum: 3
 
-- description: "message:"
+- scope: ruby
+  description: "message:"
   trigger: message
-  scope: ruby
   mTime: 1456072519873
   text: |
         message: 'xxx'
 
-- trigger: length
+- scope: ruby
+  trigger: length
   description: length
-  scope: ruby
   mTime: 1509180271263
   text: length
+
 - trigger: ife
   description: if ... else .. end
   scope: ruby
@@ -789,16 +784,16 @@
         else
         end
 
-- trigger: presence
+- scope: ruby
+  trigger: presence
   description: "presence: true"
-  scope: ruby
   mTime: 1532539934434
   text: |
         presence: true # 輸入的項目不能為空
 
-- trigger: validates
+- scope: ruby
+  trigger: validates
   description: "validates :title"
-  scope: ruby
   mTime: 1456063687905
   text: |
         validates :${1:title}
@@ -808,69 +803,72 @@
   description: private
   mTime: 1456062393279
   text: private
+
 - scope: ruby
   description: f.submit
   trigger: fsubmit
   mTime: 1456058918018
   text: f.submit
-- trigger: ftxt
+
+- scope: ruby
+  trigger: ftxt
   description: f.text_field
-  scope: ruby
   mTime: 1456078324424
   text: |
         f.text_field :title
 
-- trigger: flbl
+- scope: ruby
+  trigger: flbl
   description: f.label
-  scope: ruby
   mTime: 1456058842963
   text: f.label
-- trigger: ff
+
+- scope: ruby
+  trigger: ff
   description: form_for ...
-  scope: ruby
   mTime: 1456058720846
   text: |
         form_for ${1:@xxx} do |f|
 
-- trigger: params
+- scope: ruby
+  trigger: params
   description: "params[:xx]"
-  scope: ruby
   mTime: 1455997058291
   text: |
         params[:${1:id}]
 
-- trigger: root
+- scope: ruby
+  trigger: root
   description: root
-  scope: ruby
   mTime: 1455995492732
   text: |
         root '${1:controllers}#${2:index}'
 
-- trigger: def
+- scope: ruby
+  trigger: def
   description: def ... end
-  scope: ruby
   mTime: 1510588889806
   text: |
         def ${1:method_name}
         end
 
-- trigger: resources
+- scope: ruby
+  trigger: resources
   description: resources
-  scope: ruby
   mTime: 1455993507161
   text: |
         resources :${1:xxxs}
 
-- trigger: link
+- scope: ruby
+  trigger: link
   description: "link_to ,... ,..."
-  scope: ruby
   mTime: 1514387953323
   text: |
         link_to "${1:xxx}", ${2:xxx}_path${3:(xxx)}
 
-- trigger: b_green
+- scope: css
+  trigger: b_green
   description: 標示用
-  scope: css
   mTime: 1514047763636
   text: |
         border: 1px solid green; /* 標示用，排版完記得拿掉 */
