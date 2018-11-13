@@ -443,7 +443,7 @@
         end
         
         gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
-        
+
 - scope: ruby
   trigger: gem-jquery-rails
   description: jquery-rails
@@ -707,13 +707,11 @@
   description: attr_accessor
   mTime: 1510334379335
   text: attr_accessor
-
 - scope: ruby
   trigger: init
   description: initialize
   mTime: 1509625201574
   text: initialize
-
 - scope: ruby
   trigger: only
   description: "only: [:create, :destroy]"
@@ -747,7 +745,6 @@
   description: destroy
   mTime: 1456074513793
   text: destroy
-
 - scope: ruby
   trigger: redirect_to
   description: redirect_to xxx
@@ -774,7 +771,6 @@
   description: length
   mTime: 1509180271263
   text: length
-
 - trigger: ife
   description: if ... else .. end
   scope: ruby
@@ -803,13 +799,11 @@
   description: private
   mTime: 1456062393279
   text: private
-
 - scope: ruby
   description: f.submit
   trigger: fsubmit
   mTime: 1456058918018
   text: f.submit
-
 - scope: ruby
   trigger: ftxt
   description: f.text_field
@@ -822,7 +816,6 @@
   description: f.label
   mTime: 1456058842963
   text: f.label
-
 - scope: ruby
   trigger: ff
   description: form_for ...
@@ -866,6 +859,28 @@
   text: |
         link_to "${1:xxx}", ${2:xxx}_path${3:(xxx)}
 
+- scope: ruby
+  trigger: String_include?
+  description: Returns true if str contains the given string or character.
+  mTime: 1542153308813
+  text: |
+        include?("${1:XXX}")
+
+- scope: ruby
+  trigger: String_upcase
+  description: String.upcase()
+  mTime: 1542111222370
+  text: upcase()
+- trigger: String_downcase
+  scope: ruby
+  description: String.downcase()
+  mTime: 1542111271773
+  text: downcase()
+- trigger: String_strip
+  description: String.strip() Returns a copy of str with leading and trailing whitespace removed.
+  scope: ruby
+  mTime: 1542111825525
+  text: strip()
 - scope: css
   trigger: b_green
   description: 標示用
