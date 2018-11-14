@@ -881,6 +881,84 @@
   scope: ruby
   mTime: 1542111825525
   text: strip()
+- scope: ruby
+  trigger: case
+  description: case ... when ... end
+  mTime: 1542160926204
+  text: |
+        case aa\r
+        when 1..3\r
+          puts "between 1 and 3"\r
+        when Integer\r
+          puts "Fixnum is deprecated, use Integer"\r
+        when String\r
+          puts "string"\r
+        else\r
+          puts "default"\r
+        end
+
+- scope: ruby
+  trigger: rspec_example
+  description: rspec example
+  mTime: 1542178423703
+  text: |
+        require_relative 'fizzbuzz.rb'\r
+        \r
+        describe 'FizzBuzz' do\r
+        \r
+          it '3 應該是 Fizz' do\r
+            result = fizzbuzz(3)\r
+            expect(result).to eq('Fizz')    # 傳入 3，預期結果為 Fizz\r
+          end\r
+        \r
+          it '5 應該是 Buzz' do\r
+            result = fizzbuzz(5)\r
+            expect(result).to eq('Buzz')     # 傳入 5，預期結果為 Buzz\r
+          end\r
+        \r
+          it '15 應該是 FizzBuzz' do\r
+            result = fizzbuzz(15)\r
+            expect(result).to eq('FizzBuzz') # 傳入 15，預期結果為 FizzBuzz\r
+          end\r
+        \r
+          it '1 應該是 1' do\r
+            result = fizzbuzz(1)\r
+            expect(result).to eq(1)          # 傳入 1，預期結果為 1\r
+          end\r
+        \r
+        end
+
+- scope: ruby
+  trigger: rspec_template
+  description: rspec template
+  mTime: 1542178376423
+  text: |
+        require_relative '${1:your_test_file}.rb'\r
+        \r
+        describe '${2:your descript}' do\r
+        \r
+          it '3 應該是 Fizz' do\r
+            result = fizzbuzz(3)\r
+            expect(result).to eq('Fizz')    # 傳入 3，預期結果為 Fizz\r
+          end\r
+        \r
+          it '5 應該是 Buzz' do\r
+            result = fizzbuzz(5)\r
+            expect(result).to eq('Buzz')     # 傳入 5，預期結果為 Buzz\r
+          end\r
+        \r
+          it '15 應該是 FizzBuzz' do\r
+            result = fizzbuzz(15)\r
+            expect(result).to eq('FizzBuzz') # 傳入 15，預期結果為 FizzBuzz\r
+          end\r
+        \r
+          it '1 應該是 1' do\r
+            result = fizzbuzz(1)\r
+            expect(result).to eq(1)          # 傳入 1，預期結果為 1\r
+          end\r
+        \r
+        end
+
 - scope: css
   trigger: b_green
   description: 標示用
