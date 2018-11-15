@@ -707,13 +707,11 @@
   description: attr_accessor
   mTime: 1510334379335
   text: attr_accessor
-
 - scope: ruby
   trigger: init
   description: initialize
   mTime: 1509625201574
   text: initialize
-
 - scope: ruby
   trigger: only
   description: "only: [:create, :destroy]"
@@ -747,7 +745,6 @@
   description: destroy
   mTime: 1456074513793
   text: destroy
-
 - scope: ruby
   trigger: redirect_to
   description: redirect_to xxx
@@ -774,7 +771,6 @@
   description: length
   mTime: 1509180271263
   text: length
-
 - trigger: ife
   description: if ... else .. end
   scope: ruby
@@ -803,13 +799,11 @@
   description: private
   mTime: 1456062393279
   text: private
-
 - scope: ruby
   description: f.submit
   trigger: fsubmit
   mTime: 1456058918018
   text: f.submit
-
 - scope: ruby
   trigger: ftxt
   description: f.text_field
@@ -822,7 +816,6 @@
   description: f.label
   mTime: 1456058842963
   text: f.label
-
 - scope: ruby
   trigger: ff
   description: form_for ...
@@ -878,96 +871,116 @@
   description: String.upcase()
   mTime: 1542111222370
   text: upcase()
-
 - trigger: String_downcase
   scope: ruby
   description: String.downcase()
   mTime: 1542111271773
   text: downcase()
-
 - trigger: String_strip
   description: String.strip() Returns a copy of str with leading and trailing whitespace removed.
   scope: ruby
   mTime: 1542111825525
   text: strip()
-
 - scope: ruby
   trigger: case
   description: case ... when ... end
   mTime: 1542160926204
   text: |
-        case aa\r
-        when 1..3\r
-          puts "between 1 and 3"\r
-        when Integer\r
-          puts "Fixnum is deprecated, use Integer"\r
-        when String\r
-          puts "string"\r
-        else\r
-          puts "default"\r
+        case aa\\r
+        when 1..3\\r
+          puts "between 1 and 3"\\r
+        when Integer\\r
+          puts "Fixnum is deprecated, use Integer"\\r
+        when String\\r
+          puts "string"\\r
+        else\\r
+          puts "default"\\r
         end
 
 - scope: ruby
   trigger: rspec_example
   description: rspec example
-  mTime: 1542178423703
+  mTime: 1542265644716
   text: |
-        require_relative 'fizzbuzz.rb'\r
-        \r
-        describe 'FizzBuzz' do\r
-        \r
-          it '3 應該是 Fizz' do\r
-            result = fizzbuzz(3)\r
-            expect(result).to eq('Fizz')    # 傳入 3，預期結果為 Fizz\r
-          end\r
-        \r
-          it '5 應該是 Buzz' do\r
-            result = fizzbuzz(5)\r
-            expect(result).to eq('Buzz')     # 傳入 5，預期結果為 Buzz\r
-          end\r
-        \r
-          it '15 應該是 FizzBuzz' do\r
-            result = fizzbuzz(15)\r
-            expect(result).to eq('FizzBuzz') # 傳入 15，預期結果為 FizzBuzz\r
-          end\r
-        \r
-          it '1 應該是 1' do\r
-            result = fizzbuzz(1)\r
-            expect(result).to eq(1)          # 傳入 1，預期結果為 1\r
-          end\r
-        \r
+        require_relative 'fizzbuzz.rb'
+        
+        describe 'FizzBuzz' do
+        
+          it '3 應該是 Fizz' do
+            result = fizzbuzz(3)
+            expect(result).to eq('Fizz')    # 傳入 3，預期結果為 Fizz\\r
+          end
+        
+          it '5 應該是 Buzz' do
+            result = fizzbuzz(5)
+            expect(result).to eq('Buzz')     # 傳入 5，預期結果為 Buzz\\r
+          end
+        
+          it '15 應該是 FizzBuzz' do
+            result = fizzbuzz(15)
+            expect(result).to eq('FizzBuzz') # 傳入 15，預期結果為 FizzBuzz\\r
+          end
+        
+          it '1 應該是 1' do\\r
+            result = fizzbuzz(1)\\r
+            expect(result).to eq(1)          # 傳入 1，預期結果為 1\\r
+          end
+        
         end
 
 - scope: ruby
   trigger: rspec_template
   description: rspec template
-  mTime: 1542178376423
+  mTime: 1542265668452
   text: |
-        require_relative '${1:your_test_file}.rb'\r
-        \r
-        describe '${2:your descript}' do\r
-        \r
-          it '3 應該是 Fizz' do\r
-            result = fizzbuzz(3)\r
-            expect(result).to eq('Fizz')    # 傳入 3，預期結果為 Fizz\r
-          end\r
-        \r
-          it '5 應該是 Buzz' do\r
-            result = fizzbuzz(5)\r
-            expect(result).to eq('Buzz')     # 傳入 5，預期結果為 Buzz\r
-          end\r
-        \r
-          it '15 應該是 FizzBuzz' do\r
-            result = fizzbuzz(15)\r
-            expect(result).to eq('FizzBuzz') # 傳入 15，預期結果為 FizzBuzz\r
-          end\r
-        \r
-          it '1 應該是 1' do\r
-            result = fizzbuzz(1)\r
-            expect(result).to eq(1)          # 傳入 1，預期結果為 1\r
-          end\r
+        require_relative '${1:your_test_file}.rb'
+        
+        describe '${2:your descript}' do
+        
+          it '3 應該是 Fizz' do
+            result = fizzbuzz(3)
+            expect(result).to eq('Fizz')    # 傳入 3，預期結果為 Fizz\\r
+          end
+        
+          it '5 應該是 Buzz' do
+            result = fizzbuzz(5)
+            expect(result).to eq('Buzz')     # 傳入 5，預期結果為 Buzz\\r
+          end
+        
+          it '15 應該是 FizzBuzz' do
+            result = fizzbuzz(15)
+            expect(result).to eq('FizzBuzz') # 傳入 15，預期結果為 FizzBuzz\\r
+          end
+        
+          it '1 應該是 1' do
+            result = fizzbuzz(1)
+            expect(result).to eq(1)          # 傳入 1，預期結果為 1\\r
+          end
+        
+        end
+
+- scope: ruby
+  trigger: describe
+  description: describe do ... end
+  mTime: 1542265751470
+  text: |
+        describe ${1:class_name} do\r
         \r
         end
+
+- scope: ruby
+  trigger: source-rubygem
+  description: source rubygem
+  mTime: 1542265932390
+  text: |
+        source 'https://rubygems.org'
+
+- scope: ruby
+  trigger: Array_delete_if
+  description: "delete_if { |item| block } → ary"
+  mTime: 1542270342078
+  text: |
+        delete_if{ |i| i == 0 }
 
 - scope: css
   trigger: b_green
