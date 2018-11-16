@@ -982,6 +982,16 @@
   text: |
         delete_if{ |i| i == 0 }
 
+- scope: ruby
+  trigger: Integer_next
+  description: "Returns the successor of int, i.e. the Integer equal to int+1."
+  mTime: 1542340912262
+  text: next
+- scope: ruby
+  trigger: Integer_succ
+  description: "Returns the successor of int, i.e. the Integer equal to int+1."
+  mTime: 1542340947651
+  text: succ
 - scope: css
   trigger: b_green
   description: 標示用
