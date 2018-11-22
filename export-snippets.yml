@@ -34,6 +34,13 @@
         "use strict";
 
 - scope: html
+  trigger: nem
+  mTime: 1455995076255
+  description: "<% ... %>"
+  text: |
+        <% ${1} %>
+
+- scope: html
   trigger: nemo
   description: "<%= ... %>"
   mTime: 1455995059545
@@ -122,13 +129,6 @@
             ${1:}
           </body>
         </html>
-
-- scope: html
-  trigger: nem
-  mTime: 1455995076255
-  description: "<% ... %>"
-  text: |
-        <% ${1} %>
 
 - scope: ruby
   trigger: ns
@@ -733,18 +733,13 @@
   text: |
         belongs_to :${1:xxx}
 
-- scope: ruby
-  trigger: default
-  description: "default: false"
-  mTime: 1536947241908
-  text: |
-        default: ${1:false, 0}
 
 - scope: ruby
   trigger: destroy
   description: destroy
   mTime: 1456074513793
   text: destroy
+  
 - scope: ruby
   trigger: redirect_to
   description: redirect_to xxx
@@ -844,6 +839,13 @@
   text: |
         def ${1:method_name}
         end
+
+- scope: ruby
+  trigger: default
+  description: "default: false"
+  mTime: 1536947241908
+  text: |
+        default: ${1:false, 0}
 
 - scope: ruby
   trigger: resources
@@ -1019,6 +1021,15 @@
   mTime: 1514047651232
   text: |
         border: 1px solid red; /* 標示用，排版完記得拿掉 */
+
+- scope: css
+  trigger: color-Granny-Apple
+  description: color of Granny Apple
+  mTime: 1542858859688
+  text: |
+        body {\r
+          background-color: #C7EDCC;\r
+        }
 
 - scope: erb_html
   trigger: ife
