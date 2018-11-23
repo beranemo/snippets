@@ -1,0 +1,321 @@
+%gen_inp
+
+%ename KKSamy
+%cname 生菜KK
+%encoding UTF-8
+%selkey 1234567890
+%keyname begin
+a a
+b b
+c c
+d d
+e e
+f f
+g g
+h h
+i i
+j j
+k k
+l l
+m m
+n n
+o o
+p p
+q q
+r r
+s s
+t t
+u u
+v v
+w w
+x x
+y y
+z z
+1 1
+2 2
+3 3
+4 4
+5 5
+6 6
+%keyname end
+%chardef begin
+zzz    ͵
+a      æ
+b      b
+c      k
+d      d
+e      ɛ
+f      f
+g      g
+h      h
+i      ɪ
+j      dʒ
+k      k
+l      l
+m      m
+n      n
+o      ɑ
+p      p
+q      kw
+r      r
+s      s
+t      t
+u      ʌ
+v      v
+w      w
+x      ks
+y      j
+z      z
+a      e
+ai     e
+e      i
+ea     ɛ
+ea     e
+ea     i
+ea     ɪ
+i      aɪ
+o      o
+u      ju
+ear    ɪr
+eer    ɪr
+air    ɛr
+or     ɔr
+oi     ɔɪ
+oy     ɔɪ
+ou     aʊ
+ar     ɑr
+ar     ɛr
+al     ɔ
+oo     ʊ
+o      ʊ
+oo     ʌ
+o      ʌ
+ir     ɝ
+ur     ɝ
+er     ɚ
+er     ɝ
+a      ə
+e      ə
+o      ə
+th     θ
+th     ð
+wh     hw
+ing    ɪŋ
+ch     tʃ
+sh     ʃ
+c      s
+s      ʒ
+ge     dʒ
+gi     dʒ
+gy     dʒ
+ph     f
+wr     r
+y      ɪ
+y      aɪ
+st     st
+st     sd
+sp     sp
+sp     sb
+sk     sk
+sk     sg
+tr     tr
+dr     dr
+s      z
+a      ɑ
+a      ɔ
+ture   tʃɚ
+a               ə
+a               e
+ability         əˋbɪlətɪ
+able            ˋebəl
+about           əˋbaʊt
+above           əˋbʌv
+abroad          əˋbrɔd
+absence         ˋæbsəns
+absent          ˋæbsənt
+accept          əkˋsɛpt
+according       əˋkɔrdɪŋ
+across          əˋkrɔs
+act             ækt
+action          ˋækʃən
+active          ˋæktɪv
+actor           ˋæktɚ
+add             æd
+addition        ə`dɪʃən
+address         ə`drɛs
+adult           ə`dʌlt
+advance         əd`væns
+advantage       əd`væntɪdʒ
+adventure       əd`vɛntʃɚ
+affair          ə`fɛr
+after           `æftɚ
+afternoon       
+again
+against
+age
+ago
+agree
+agreement
+ahead
+aid
+aim
+air
+aircraft
+airline
+airmail
+airplane
+airport
+alarm
+album
+alike
+all
+allow
+almond
+almost
+alone
+aloud
+alphabet
+already
+also
+although
+altogether
+always
+am
+among
+analogy         əˋnælədʒɪ
+ancient
+and
+Andrew          ˋændru
+anger
+angry
+animal
+ankle           ˋæŋkəl
+anniversary     ͵ænəˋvɝsərɪ
+another
+answer
+ant
+any
+anybody
+anyhow
+anyone
+anything
+anytime
+anyway
+anywhere
+apartment
+ape
+appear
+appearance
+appetite
+apple
+apply
+April
+apron
+are
+area
+argue
+arguement
+arm
+armchair
+army
+aroma           əˋromə
+around
+arrange
+arrest
+arrive
+arrow
+art
+artist
+as
+ask
+asleep
+assimilate      əˋsɪməlet
+assistant
+astronaut       ˋæstrə͵nɔt
+at
+attack
+attend
+attention
+August          ˋɔgəst    
+aunt
+avoid
+away
+ax              æks
+blast           blæst
+Cantonese       ͵kæntəˋniz
+captain         ˋkæptɪn
+chimney         ˋtʃɪmnɪ
+chin            tʃɪn
+circus          ˋsɝkəs
+colon           ˋkolən
+Confucius       kənˋfjuʃəs
+congress        ˋkɑŋgrəs
+conspire        kənˋspaɪr
+conviction      kənˋvɪkʃən
+costume         ˋkɑstjum
+crocodile       ˋkrɑkə͵daɪl
+crucial         ˋkruʃəl
+deliver         dɪˋlɪvɚ
+departure       dɪˋpɑrtʃɚ
+despondent      dɪˋspɑndənt
+dozen           ˋdʌzn
+erosion         ɪˋroʒən
+Egypt           ˋidʒɪpt
+elicit          ɪˋlɪsɪt
+energy          ˋɛnɚdʒɪ
+enough          əˋnʌf
+Esther          ˋɛstɚ
+evacuate        ɪˋvækjʊ͵et
+fever           ˋfivɚ
+figure          ˋfɪgjɚ
+hoax            hoks
+ginger          ˋdʒɪndʒɚ
+gorgeous        ˋgɔrdʒəs
+hero            ˋhɪro
+his             hɪz
+husband         ˋhʌzbənd
+immoral         ɪˋmɔrəl
+immortal        ɪˋmɔrtəl
+jellyfish       ˋdʒɛlɪ͵fɪʃ
+joint           dʒɔɪnt
+leaflet         ˋliflɪt
+London          ˋlʌndən
+manifest        ˋmænə͵fɛst
+mate            met
+moral           ˋmɔrəl
+nail            nel
+naked           ˋnekɪd
+new             nju
+nose            noz
+nostalgia       nɑsˋtældʒɪə
+October         ɑkˋtobɚ
+oppression      əˋprɛʃən
+organ           ˋɔrgən
+palm            pam
+particularly    pɚˋtɪkjəlɚlɪ
+pertinent       ˋpɝtnənt
+philosopher     fəˋlɑsəfɚ
+phonics         ˋfɑnɪks
+plummet         ˋplʌmɪt
+plural          ˋplʊrəl
+prospective     prəˋspɛktɪv
+pupil           ˋpjupəl
+seize           siz
+servant         ˋsɝvənt
+silence         ˋsaɪləns
+spew            spju
+spirit          ˋspɪrɪt
+sporadic        spəˋrædɪk
+supersede       ͵supɚˋsid
+supposed        səˋpozd
+suppress        səˋprɛs
+Sydney          ˋsɪdnɪ
+rupture         ˋrʌptʃɚ
+tease           tiz
+transmission    trænsˋmɪʃən
+transparent     trænsˋpɛrənt
+vigil           ˋvɪdʒəl
+vocabulary      vəˋkæbjə͵lɛrɪ
+volatile        ˋvɑlətəl
+voracious       voˋreʃəs
+%chardef end
